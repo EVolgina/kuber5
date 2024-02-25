@@ -1,7 +1,7 @@
 # Домашнее задание к занятию «Сетевое взаимодействие в K8S. Часть 2»
 - Цель задания. В тестовой среде Kubernetes необходимо обеспечить доступ к двум приложениям снаружи кластера по разным путям.
 ## Задание 1. Создать Deployment приложений backend и frontend
-- Создать Deployment приложения frontend из образа nginx с количеством реплик 3 шт. [fronend]()
+- Создать Deployment приложения frontend из образа nginx с количеством реплик 3 шт. [fronend](https://github.com/EVolgina/kuber5/blob/main/front.yaml)
 - Создать Deployment приложения backend из образа multitool. [backend](https://github.com/EVolgina/kuber5/blob/main/back.yaml)
 - Добавить Service, которые обеспечат доступ к обоим приложениям внутри кластера. [svr-frontend](), [svr-backend]()
 - Продемонстрировать, что приложения видят друг друга с помощью Service.
