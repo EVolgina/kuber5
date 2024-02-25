@@ -3,7 +3,7 @@
 ## Задание 1. Создать Deployment приложений backend и frontend
 - Создать Deployment приложения frontend из образа nginx с количеством реплик 3 шт. [fronend](https://github.com/EVolgina/kuber5/blob/main/front.yaml)
 - Создать Deployment приложения backend из образа multitool. [backend](https://github.com/EVolgina/kuber5/blob/main/back.yaml)
-- Добавить Service, которые обеспечат доступ к обоим приложениям внутри кластера. [svr-frontend](), [svr-backend]()
+- Добавить Service, которые обеспечат доступ к обоим приложениям внутри кластера. [svr-frontend](), [svr-backend](https://github.com/EVolgina/kuber5/blob/main/svr-back.yaml)
 - Продемонстрировать, что приложения видят друг друга с помощью Service.
 - Предоставить манифесты Deployment и Service в решении, а также скриншоты или вывод команды п.4.
 ```
