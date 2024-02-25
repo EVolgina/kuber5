@@ -81,5 +81,31 @@ Commercial support is available at
 - Продемонстрировать доступ с помощью браузера или curl с локального компьютера.
 - Предоставить манифесты и скриншоты или вывод команды п.2.
 ```
-
+vagrant@vagrant:~/kube/zad5$ vagrant@vagrant:~/kube/zad5$ kubectl apply -f ingress.yaml
+ingress.networking.k8s.io/ingress created
+vagrant@vagrant:~/kube/zad5$ kubectl describe ingress
+Name:             ingress
+Labels:           <none>
+Namespace:        default
+Address:
+Ingress Class:    <none>
+Default backend:  <default>
+Rules:
+  Host        Path  Backends
+  ----        ----  --------
+  *
+              /      svc-front:80 (10.1.52.147:80,10.1.52.163:80,10.1.52.189:80)
+              /api   svc-back:80 (10.1.52.174:80)
+Annotations:  nginx.ingress.kubernetes.io/rewrite-target: /
+Events:       <none>
+vagrant@vagrant:~/kube/zad5$ curl http://10.0.2.15/api
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>404 Not Found</title>
+</head><body>
+<h1>Not Found</h1>
+<p>The requested URL was not found on this server.</p>
+<hr>
+<address>Apache/2.4.41 (Ubuntu) Server at 10.0.2.15 Port 80</address>
+</body></html>
 ```
